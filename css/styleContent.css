@@ -1,0 +1,13 @@
+.content{
+    color: black;
+    border: 2px solid gray;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+    grid-area: 2/3 / 9/15;
+}

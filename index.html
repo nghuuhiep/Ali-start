@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dành riêng Ali Dương</title>
+
+    <link rel="stylesheet" href="css/styleContent.css">
+    <link rel="stylesheet" href="css/styleSheet.css">
+    <link rel="stylesheet" href="css/Border.css">
+    <script src="script.js"></script>
+
+
+    <!-- <style>
+        .content {
+            color: black;
+            border: 2px solid gray;
+            border-radius: 10px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            overflow: hidden;
+
+            grid-area: 2/3 / 9/15;
+        }
+
+        #main {
+            border: 2px solid gray;
+        }
+
+        body {
+            /* display: flex; */
+
+            background-color: black;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+
+            justify-content: center;
+            align-items: center;
+
+            border: 2p solid green;
+        }
+
+        #BackGroundVideo {
+            opacity: 0.15;
+            position: absolute;
+
+        }
+
+        #main {
+            display: grid;
+            grid-template-columns: repeat(16, 1fr);
+            grid-template-rows: repeat(9, 1fr);
+            aspect-ratio: 1/1;
+
+
+            margin: 0 auto;
+            width: 100vw;
+            height: 100vh;
+
+            background: linear-gradient(to right,
+                    rgba(0, 0, 0, 0.02),
+                    rgb(100, 100, 100),
+                    rgb(200, 200, 200),
+                    rgb(200, 200, 200),
+                    rgb(200, 200, 200),
+                    rgb(200, 200, 200),
+                    rgb(200, 200, 200),
+                    rgb(200, 200, 200),
+                    rgb(200, 200, 200),
+                    rgb(100, 100, 100),
+                    rgba(0, 0, 0, 0.02));
+
+            border-radius: 10px;
+            /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+        }
+
+        #div {
+            display: flex;
+            color: red;
+        }
+
+        #test {
+            display: flex;
+            background-color: brown;
+            grid-area: 1/1/1/1;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const contents = document.getElementsByClassName('content');
+            const content = contents[0];
+
+            var typeLetter = true;
+            var typeCounter = 0;
+            var textCounter = 0;
+            var keysdown = [];
+
+
+
+            var text = "Nhấn hoặc spacebar để tiếp tục!"
+
+            var textContents = [
+                { text: 'Xin chào!' },
+                { text: 'Chào mừng đến với thử nghiệm của Hiệp.' },
+                { text: 'Nơi đây có thể xem như một lá thư' },
+                { text: 'Cho bạn bè' },
+                { text: 'Cho người yêu, ...' },
+                { text: 'Thậm chí cả crush đấy thằng FA ạ!' },
+                { text: 'Là sản phẩm đầu tiên được mở công khai của tao' },
+                { text: 'Ban đầu và cả bây giờ, dự án này không phải dành cho mày' },
+                { text: 'Mà Là ...' },
+                { text: 'Ali Dương' },
+                { text: 'À không! Dương Ánh Liên!' },
+                { text: 'Chúc tao thành công đi!' },
+            ]
+
+
+
+
+
+            function loop() {
+                if (keysdown.ENTER) {
+                    console.log(textContents[1].text)
+                }
+
+                if (typeCounter == text.length) {
+                    typeCounter = 0;
+                    typeLetter = false;
+                }
+
+                if (typeLetter) {
+                    if (typeCounter < text.length) {
+                        content.textContent += text[typeCounter];
+                        typeCounter++
+                    }
+                }
+
+
+                requestAnimationFrame(loop)
+            }; loop()
+
+
+
+            document.addEventListener('keydown', (e) => {
+                keysdown[e.key.toLocaleUpperCase()] = true;
+            })
+            document.addEventListener('keyup', (e) => {
+                delete keysdown[e.key.toLocaleUpperCase()];
+                switch (e.key) {
+                    case " ":
+                        if (textCounter == textContents.length) {
+                            textCounter = 0;
+                        }
+
+                        content.textContent = " ";
+                        typeLetter = true;
+                        text = textContents[textCounter].text
+                        textCounter++
+                        break;
+                }
+            })
+            document.addEventListener('click', () => {
+                if (textCounter == textContents.length) {
+                    textCounter = 0;
+                }
+
+                content.textContent = " ";
+                typeLetter = true;
+                text = textContents[textCounter].text
+                textCounter++
+            })
+
+
+        })
+
+    </script> -->
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+    <video width="100%" id="BackGroundVideo" style="z-index: 0;" autoplay muted loop>
+        <source src="resources/BackGroundGalaxy.mp4" type="video/mp4">
+    </video>
+    <div id="main" style="z-index: 1;">
+
+        <div class="content">
+
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>
